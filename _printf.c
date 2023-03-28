@@ -1,4 +1,5 @@
 #include "main.h"
+<<<<<<< HEAD
 
 /**
  * _printf - formatted output conversion and print data.
@@ -48,4 +49,55 @@ int _printf(const char *format, ...)
 	}
 	print_buf(buffer, ibuf), free(buffer), va_end(arguments);
 	return (len);
+=======
+#include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int _printf(const char *format, ...)
+{
+	va_list args;
+	va_start(args, format);
+
+	int count = 0;
+
+	while (*format)
+	{
+		if (*format == '%')
+		{
+			format++;
+
+			if (*format == 'c')
+			{
+				char c = (char) va_arg(args, int);
+				write(1, &c, 1);
+				count++;
+			}
+			else if (*format == 's')
+			{
+				char *s = va_arg(args, char *);
+				while (*s)
+				{
+					write(1, s, 1);
+					count++;
+					s++;
+				}
+			}
+			else if (*format == '%')
+			{
+				write(1, "%", 1);
+				count++;
+			}
+		}
+		else
+		{
+			write(1, format, 1);
+			count++;
+		}
+		format++;
+	}
+
+	va_end(args);
+	return (count);
+>>>>>>> 334de9fc325445e751e0621d8d5836c6251e864c
 }

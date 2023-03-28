@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
@@ -59,3 +60,11 @@ char *fill_short_oct_array(char *bnr, char *oct);
 char *fill_hex_array(char *bnr, char *hex, int isupp, int limit);
 
 #endif
+=======
+#ifndef MAIN_H
+#define MAIN_H
+
+int _printf(const char *format, ...);
+
+#endif /* MAIN_H */
+>>>>>>> 334de9fc325445e751e0621d8d5836c6251e864c
