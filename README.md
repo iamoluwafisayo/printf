@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # printf()
 The printf project is a collaboration project by **Ayomide Suara** and **Remi Oni**, students of the ALX Software Engineering Programme by Holberton School, in which a function named "_printf" imitates the actual "printf" command located in the stdio.h library. It contains some of the basic features and functions found in the manual 3 of "printf".
 
@@ -330,6 +329,3 @@ Eno-obong Ukpong
 ------------
 
 ### End
-=======
-printf pair work
->>>>>>> 334de9fc325445e751e0621d8d5836c6251e864c
